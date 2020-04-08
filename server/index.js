@@ -1,10 +1,10 @@
 const path = require('path');
 const express = require('express');
-
+const morgan = require('morgan');
 const PORT = 31415;
 
 var app = express();
-
+app.use(morgan("dev"));
 app.use(express.json());
 
 app.use(require('./routes/profile'));

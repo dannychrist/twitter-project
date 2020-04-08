@@ -7,15 +7,18 @@ export const CurrentUserProvider = ({ children }) => {
   const [status, setStatus] = useState('loading');
 
   useEffect(() => {
+
     setStatus('loading');
     fetch('/api/me/profile')
       .then(res => res.json())
       .then(data => setCurrentUser(data))
       .then(setStatus('idle'))
-  }, []);
-console.log(children);
+
+    }, []);
+
   return (
-    <CurrentUserContext.Provider value={{currentUser, status}}>
+    <CurrentUserContext.Provider 
+      value={{currentUser, status}}>
       {children}
     </CurrentUserContext.Provider>
   )

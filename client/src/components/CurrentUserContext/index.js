@@ -1,1 +1,1 @@
-export { default } from './CurrentUserContext';
+export { CurrentUserProvider, CurrentUserContext } from './CurrentUserContext';

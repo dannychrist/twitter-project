@@ -1,8 +1,10 @@
 import React from 'react'
+import styled from 'styled-components';
 
 const Logo = () => {
   return (
-  <svg height="50" width="50" fill="hsl(258deg, 100%, 50%)" viewBox="0 0 90 90">
+    <Wrapper>
+  <svg height="55" width="55" fill="hsl(258deg, 100%, 50%)" viewBox="0 0 90 90">
       <path d="M67.431,24.417c0.473-0.017,0.936,0.006,1.386,0.034c0.452,0.012,0.884,0.065,1.295,0.121
           c0.413,0.044,0.802,0.1,1.155,0.183c0.355,0.074,0.682,0.142,0.971,0.202c0.284,0.083,0.532,0.155,0.736,0.214    
           c0.41,0.12,0.644,0.188,0.644,0.188s-0.224-0.096-0.617-0.263c-0.197-0.084-0.436-0.187-0.711-0.304    
@@ -34,6 +36,15 @@ const Logo = () => {
           c0-0.187-0.014-0.37-0.021-0.555c0.306-0.036,0.61-0.078,0.92-0.097C66.482,24.436,66.96,24.414,67.431,24.417z">
       </path>
   </svg>
+  </Wrapper>
   )
 }
+
+const Wrapper = styled.div`
+  display: flex;
+  padding-left: 10px;
+  padding-bottom: 20px;
+
+`;
+
 export default Logo
